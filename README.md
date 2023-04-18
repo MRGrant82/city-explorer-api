@@ -35,3 +35,17 @@ Start time: 3pm EST
 Finish time: _____
 
 Actual time needed to complete: _____
+
+
+-------Whiteboard-------
+
+1. Create a new GitHub repository called `city-explorer-api`, clone it locally, and create a feature branch off of `main`.
+2. Run `npm init` to create a new project, install `express`, `dotenv`, and `cors`, and create a `.gitignore` and `.eslintrc.json`.
+3. Add the remaining files identified in the folder tree above, including `weather.json`, and set the contents of `.env` to set a value for `PORT`.
+4. Create an Express server that reads the weather data from `weather.json`.
+5. Create an API endpoint of `/weather` that processes a GET request containing latitude, longitude, and searchQuery information, and uses the `.find()` method to find which city the search data belongs to.
+6. If the user did not search for one of the three cities with information available, return an error.
+7. Create a class for `Forecast`, with properties of `date` and `description`, and use the static data of the city the user searched to create an array of `Forecast` objects, one for each day.
+8. Send the full array back to the client who requested data from the `/weather` endpoint.
+9. Create a `Weather` component to render forecast data to the page when a city search successfully returns lat and lon info, show the `Weather` component, populated with the server data when the server returns the array of forecast data, and use appropriate Bootstrap components to nicely display the forecast data.
+10. Create a function to handle errors from any API call, and send a status of 500 along with an error message to the client. Add clear error messages if something goes wrong so that users know if they need to make any changes or try again in a different manner.
