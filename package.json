@@ -1,0 +1,25 @@
+{
+  "name": "city-explorer-api",
+  "version": "1.0.0",
+  "description": "City Explorer API",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test city api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MRGrant82/city-explorer.git"
+  },
+  "keywords": [
+    "city",
+    "explorer",
+    "api"
+  ],
+  "author": "Michael Grant",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
