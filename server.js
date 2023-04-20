@@ -27,11 +27,10 @@ app.listen(PORT, () => console.log(`We are up on port ${PORT}`));
 // Endpoints -- proof of life and catchalls //
 
 // Home endpoint
-app.get('/', (request, response) => {
-  response.status(200).send('Welcome to my server!');
-});
+
 
 app.get('/weather', (request, response, next) => {
+    console.log('We are in the /weather route')
   try {
     const searchQuery = request.query.searchQuery;
     const lat = parseFloat(request.query.lat);
@@ -52,6 +51,11 @@ app.get('/weather', (request, response, next) => {
     next(error);
   }
 });
+
+
+app.get('/', (request, response) => {
+    response.status(200).send('Welcome to my server!');
+  });
 
 class Forecast {
   constructor(dayData) {
